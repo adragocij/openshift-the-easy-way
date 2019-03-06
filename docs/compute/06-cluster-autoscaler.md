@@ -10,7 +10,7 @@ An operator manages the Cluster Autoscaler component.
 To view the operator, execute the following:
 
 ```sh
-oc get deployments -n openshift-cluster-api cluster-autoscaler-operator
+oc get deployments -n openshift-machine-api cluster-autoscaler-operator
 NAME                          DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 cluster-autoscaler-operator   1         1         1            1           1h
 ```
@@ -41,7 +41,7 @@ oc create -f https://raw.githubusercontent.com/derekwaynecarr/openshift-the-easy
 To verify the cluster autoscaler is deployed, execute the following:
 
 ```sh
-oc get deployments cluster-autoscaler-default -n openshift-cluster-api
+oc get deployments cluster-autoscaler-default -n openshift-machine-api
 NAME                         DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 cluster-autoscaler-default   1         1         1            1           3m
 ```
