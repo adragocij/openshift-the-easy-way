@@ -25,7 +25,7 @@ available zones to meet observed demand.
 To view the machine sets, execute the following:
 
 ```sh
-oc get machinesets -n openshift-cluster-api
+oc get machinesets -n openshift-machine-api
 NAME                       AGE
 decarr-worker-us-east-2a   1d
 decarr-worker-us-east-2b   1d
@@ -52,7 +52,7 @@ boundaries.
 To verify the annotations have been applied, execute the following:
 
 ```sh
-oc get machinesets -n openshift-cluster-api -o yaml | grep -A 2 annotations
+oc get machinesets -n openshift-machine-api -o yaml | grep -A 2 annotations
     annotations:
       sigs.k8s.io/cluster-api-autoscaler-node-group-max-size: "12"
       sigs.k8s.io/cluster-api-autoscaler-node-group-min-size: "1"
@@ -82,7 +82,7 @@ This will create a large number of pods that need scheduling.
 To see the new machines coming up:
 
 ```sh
-oc get machines -n openshift-cluster-api
+oc get machines -n openshift-machine-api
 ```
 
 Each machine will take ~3m to join the cluster pending image pull time.

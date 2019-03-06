@@ -2,7 +2,7 @@ apiVersion: "autoscaling.openshift.io/v1alpha1"
 kind: "MachineAutoscaler"
 metadata:
   generateName: autoscale-us-east-2b-
-  namespace: "openshift-cluster-api"
+  namespace: "openshift-machine-api"
 spec:
   minReplicas: 1
   maxReplicas: 12
